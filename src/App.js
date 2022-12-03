@@ -14,12 +14,12 @@ class App extends Component {
       {
         id: 2,
         title: "Wash dishes",
-        completed: false,
+        completed: true,
       },
       {
         id: 3,
         title: "Cook food",
-        completed: false,
+        completed: true,
       },
     ],
   };
