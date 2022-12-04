@@ -25,13 +25,25 @@ export class TodoItem extends Component {
     };
   };
 
+  // markComplete = (e) => {
+  //   console.log(this.props);
+  // };
+
   render() {
+    // Destructure to extract props being passed down
+    const { id, title } = this.props.todo;
+
     return (
       // <div style={{ backgroundColor: '#f4f4f4' }}>
       // <div style={itemStyle}>
       <div style={this.getStyle()}>
         <p>
-          <input type="checkbox" /> {this.props.todo.title}
+          {/* <input type="checkbox" onChange={this.markComplete} /> */}
+          <input
+            type="checkbox"
+            onChange={this.props.markComplete.bind(this, id)}
+          />{" "}
+          {title}
         </p>
       </div>
     );
