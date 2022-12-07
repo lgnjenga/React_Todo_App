@@ -6,13 +6,15 @@ export default class AddTodo extends Component {
     title: "",
   };
 
+  // input:text onChange event to capture value as you type
+  onType = (e) => this.setState({ [e.target.name]: e.target.value });
+
+  // form onSubmit event to send props upwards to App.js
   onSend = (e) => {
     e.preventDefault();
     this.props.addTodo(this.state.title);
     this.setState({ title: "" });
   };
-
-  onType = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     return (

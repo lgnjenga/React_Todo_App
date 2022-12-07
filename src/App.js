@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+// import { v4 as uuid } from "uuid";
+// const { v4: uuidv4 } = require("uuid");
+// import uuidv4 from "uuidv4";
 import Header from "./components/layout/Header";
 import AddTodo from "./components/AddTodo";
 import "./App.css";
@@ -52,7 +55,7 @@ class App extends Component {
     // console.log(title);
     const newTodo = {
       id: 4,
-      title,
+      title: title,
       completed: false,
     };
     this.setState({
